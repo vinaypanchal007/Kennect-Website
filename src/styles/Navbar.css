@@ -1,0 +1,24 @@
+.App{
+  height: 80px;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+    }
+  
+    .navbar-nav .nav-item {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 767px) {
+        #loginBtn {
+            margin-top: 10px;
+        }
+    }
+      
+    
+}
+  

@@ -1,0 +1,172 @@
+.container .row .col {
+  text-decoration-color: white;
+}
+
+.rotating-images-container {
+  width: 100%;
+  overflow: visible;
+  position: relative;
+  padding-left: 50px; /* Set the desired left padding */
+}
+
+.rotating-image {
+  position: absolute;
+  width: 80px; /* Set the desired width */
+  height: 80px; /* Set the desired height */
+  margin: 20 auto; /* Center the images horizontally */
+  animation: rotateImages 8s linear infinite; /* Adjust the duration as needed */
+  opacity: 0; /* Start with all images hidden */
+}
+
+.rotating-image:nth-child(1) {
+  animation-delay: 0s; /* Delay the animation for the first image */
+}
+
+.rotating-image:nth-child(2) {
+  animation-delay: 1s; /* Delay the animation for the second image */
+}
+
+.rotating-image:nth-child(3) {
+  animation-delay: 2s; /* Delay the animation for the third image */
+}
+
+.rotating-image:nth-child(4) {
+  animation-delay: 3s; /* Delay the animation for the fourth image */
+}
+
+.rotating-image:nth-child(5) {
+  animation-delay: 4s; /* Delay the animation for the fifth image */
+}
+
+.rotating-image:nth-child(6) {
+  animation-delay: 5s; /* Delay the animation for the sixth image */
+}
+
+.rotating-image:nth-child(7) {
+  animation-delay: 6s; /* Delay the animation for the seventh image */
+}
+
+.rotating-image:nth-child(8) {
+  animation-delay: 7s; /* Delay the animation for the eighth image */
+}
+
+@keyframes rotateImages {
+  0% {
+    margin-left: 50px;
+    transform: translateX(100%); /* Start the first image from the right side */
+    opacity: 0; /* Hide the first image */
+  }
+
+  12.5% {
+    transform: translateX(0); /* Show the first image */
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-700%); /* Move all images to the left side */
+    opacity: 0; /* Hide all images */
+  }
+}
+
+@media (min-width: 768px) {
+  @keyframes rotateImages {
+    0% {
+      margin-left: 0px;
+      transform: translateX(100%); /* Start the first image from the right side */
+      opacity: 0; /* Hide the first image */
+    }
+
+    12.5% {
+      transform: translateX(0); /* Show the first image */
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateX(-700%); /* Move all images to the left side */
+      opacity: 0; /* Hide all images */
+    }
+  }
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left-side {
+  flex: 1;
+  padding: 20px;
+  background-color: #047d80;
+}
+
+.right-side {
+  flex: 1;
+  padding: 20px;
+  background-color: #047d80;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .image-container img {
+    margin-top: 20;
+    width: 50%;
+    max-width: 150px; /* Adjust the maximum width as needed */
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .image-container img {
+    margin-top: 30px;
+
+    .p1 .p2{
+      width: 50;
+      height: 40;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .right-side {
+    margin-top: 20px;
+  }
+
+  .image-container {
+    flex-direction: row;
+  }
+
+  .image-container img {
+    width: 100%;
+  }
+
+
+  #kennectButton {
+    width: 40%;
+    margin-top: 20px;
+  }
+
+  #heroImage {
+    display: none;
+  }
+}
